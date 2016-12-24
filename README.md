@@ -14,8 +14,9 @@ This Repo is just a documentation. You can download the package from Unity3D [As
 - Supports transparent pages
 
 #Documentation
- [Docs](https://github.com/Dandarawy/Unity3DBookPageCurlPro/blob/master/docs/index.md)
- [Video tutorial](ttps://youtu.be/eAZ7aab8I4g)
+ [Docs](https://github.com/Dandarawy/Unity3DBookPageCurlPro/blob/master/docs/index.md) 
+ 
+ [Video tutorial](https://youtu.be/eAZ7aab8I4g)
 
 #Asset store
 Download the latest unity package from unity [Asset Store](http://u3d.as/ECT)
