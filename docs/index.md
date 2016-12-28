@@ -3,8 +3,9 @@
 **The "Unity3D Book Page Curl Pro" is a unity package that is used to create a book with page flip effect using unity3D native UI tools, with much more features than the free version.**
 
 <p align="center">
-  <img src="https://dl.dropbox.com/s/mupvgepfqulsy46/Cover.png?dl=0">
+  <img align="center" src="images/Cover.png">
 </p>
+
 ## **Getting Started**
 
 _**Download the unity package from unity [Asset Store](	http://u3d.as/ECT).**_ 
@@ -24,7 +25,7 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 
 
 ### What you need to know about your first book:
-<img align="right" src="https://dl.dropbox.com/s/7wwgz80va8vbl8n/Inspector_3.png?dl=0">
+<img align="right" src="images/Inspector.png">
    * This book now contains only two papers each paper has front and back (two pages)
    * You can see all book papers by click on the book in hierarchy window to show the BookPro component in Inspec tor window, under the BookPro component in inspector window you can find a list of all book’s papers 
    * You can change the current shown paper (which will be the start paper when you run the scene) by pressing the next or previous buttons in the “Current Paper Navigation Panel”, or writing the current paper index if you know it, or just press “Set Current” button in the paper item inside the papers list
@@ -37,11 +38,11 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 ### Add/Delete/Modify papers:
    * To add new paper just press the + button under the list, the new paper will be added, its front page is shown in the right part of the book and the back page is shown in the left part (this is the same preview that you get when press on the show button).
 
-<img  src="https://dl.dropbox.com/s/u4ozmn6i515cs5t/AddNewPaper.jpg?dl=0">
+<img  src="images/AddNewPaper.jpg">
 
 
-<img align="right" src="https://dl.dropbox.com/s/rmm1ndq3y9vj3he/updateNames.png?dl=0">
-<img align="right" src="https://dl.dropbox.com/s/xmqyl4z42b1v2e3/PapersOrdering.png?dl=0">
+<img align="right" src="images/updateNames.png">
+<img align="right" src="images/PapersOrdering.png">
    * To delete paper, select it on the papers list and press the (-) button.
    * To change papers orders just drag papers in papers list.
    * To rename pages automatically according to their order press on “Update Pages Names” button, then press OK.
@@ -50,8 +51,8 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
    * Each page has image component and mask component, don’t remove or edit the mask component. It is responsible for keeping all page’s contents inside the page.
    * You can select the image source for page image component or change its color.
    * You can add any UI element under the page (as child).
-<img  src="https://dl.dropbox.com/s/92qhhk01hn7zj8p/EditPage.jpg?dl=0">
-<img  align="right" src="https://dl.dropbox.com/s/wxaul6gimg53r3l/result_2.png?dl=0"> 
+<img  src="images/EditPage.jpg">
+<img  align="right" src="images/result.png"> 
    * Keep in mind this is just a preview the two pages in left and right will represent one paper, they will be placed back-to-back
    * If you want to call any function when any page flipped add it to the OnFlip Event List.
    * If you want to resize the area that the user can drag the page from it, open the Book node in inspector to show its children, you will find two objects "RightHotSpot" and "LeftHotSpot" resize them and set their anchors as required.
@@ -59,7 +60,7 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 
   
 ### Create Automatic Flipping Book:
-  <img  align="right" src="https://dl.dropbox.com/s/mhwsdtfjg7p0kg7/autoFlip.png?dl=0"> 
+  <img  align="right" src="images/autoFlip.png"> 
 * After creating your book as mentioned above add an "Auto Flip" component on it.
 * Choose flipping direction( if you choose left to right make sure that the current paper of the book component is equal to your papers count "last page index + 1").
 * **Uncheck** the **interactable** check in the book component.
@@ -74,6 +75,6 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 * Add a new slot on each button OnClick list by clicking the (+) sign,  assign the Book as the game object then select the “AutoFlip -> FlipRightPage” for the next button and “Auto Flip -> Flip Left Page” to the previous button.
 
 <p align="center">
-  <img src="https://dl.dropboxusercontent.com/s/jgb3ijac6vrr0vf/button_click.png?dl=0" alt="Button OnClick event">
+  <img src="images/button_click.png" alt="Button OnClick event">
 </p>
 * If you need to flip the page from code (based on a custom action) you can call the `FlipLeftPage()` or `FlipRightPage()`.
