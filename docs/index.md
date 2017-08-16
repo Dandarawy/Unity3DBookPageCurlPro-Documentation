@@ -91,7 +91,7 @@ _**Watch a video version of this tutorial [here ](https://youtu.be/eAZ7aab8I4g).
 
 * If you need to flip the page from code (based on a custom action) you can call the `FlipLeftPage()` or `FlipRightPage()`.
 
-### Performance Optmization:
+### Performance Optimization:
 
 If you port your app to mobile you may experience a performance issues as the default setting of the book is consuming a lot of draw calls, here are some tips to improve the performance:
 
