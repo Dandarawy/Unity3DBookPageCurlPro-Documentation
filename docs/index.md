@@ -9,13 +9,13 @@
 _**Download the unity package from unity [Asset Store](	http://u3d.as/ECT).**_ 
 
 ## **Video tutorial**
-_**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I4g).**_ 
+_**Watch a video version of this tutorial [here ](https://youtu.be/eAZ7aab8I4g).**_ 
 
 
 ### Create your first book:
 
    * Import the unity package
-   * Create a canvas and EventSystem objects if you don't have one (the easiest way to create them is by adding any UI object then you can delete it).
+   * Create a canvas and EventSystem objects if you don't have one.
    * Drag a book prefab under the Canvas element
    * Resize the book on your scene and reposition the anchors as required.
    * Select the book from hierarchy to show it in inspector.
@@ -26,7 +26,7 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 <img align="right" src="images/Inspector.png">
 
    * This book now contains only two papers each paper has front and back (two pages)
-   * You can see all book papers by click on the book in hierarchy window to show the BookPro component in Inspec tor window, under the BookPro component in inspector window you can find a list of all book’s papers 
+   * You can see all book papers by click on the book in hierarchy window to show the BookPro component in Inspector window, under the BookPro component in inspector window you can find a list of all book’s papers 
    * You can change the current shown paper (which will be the start paper when you run the scene) by pressing the next or previous buttons in the “Current Paper Navigation Panel”, or writing the current paper index if you know it, or just press “Set Current” button in the paper item inside the papers list
    * The index of current paper represent the paper that its front shown in the right part of the book, in other words if you want to show the very first page of the book (aka the front cover of the book), you need to set the current paper to 0, and if you need to show the very last page (aka the back cover of the book) you need to set the current paper to (last paper index +1).
    * The two pages shown always marked in inspector with the red color, the back page of previous paper always shown in the left and front page of current paper always shown in the right
@@ -60,6 +60,11 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
    * RUN and enjoy the page curl effect!
    
 
+### Flipping Range:
+
+  <img  align="right" src="images/FlippingRange.png"> 
+  In many cases you may need to strict the papers that can be flipped(i.e. you may need to prevent the first and last papers from being flipped), in this case you can determin the range of flipping from the "Flipping Range" in the inspector, you can see how this feature can be useful by checking out the first example scene
+
   
 ### Create Automatic Flipping Book:
 
@@ -85,3 +90,15 @@ _**Watch a the video version of this tutorial [here ](https://youtu.be/eAZ7aab8I
 </p>
 
 * If you need to flip the page from code (based on a custom action) you can call the `FlipLeftPage()` or `FlipRightPage()`.
+
+### Performance Optmization:
+
+If you port your app to mobile you may experience a performance issues as the default setting of the book is consuming a lot of draw calls, here are some tips to improve the performance:
+
+* To minimize the draw calls you can add pages sprites to one atlas.
+  
+  <img  align="right" src="images/TransparentPages.png"> 
+
+* As the book may has transparent pages, it render all previous and next pages which cost a lot of draw calls, So if your book doesn't contain transparent pages, you should uncheck the "Has Transparent Pages" option from the inspector.
+
+* If your scene contains many UI elements you advised to put the book under separate canvas (it may be a child to the main canvas), as updating any UI element under the canvas will force the canvas to be updated entirely.
